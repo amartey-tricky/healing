@@ -1,0 +1,16 @@
+.header {
+  @apply mt-4 
+  fixed 
+  w-full 
+  font-medium 
+  px-4 
+  md:px-8;
+}
+
+.nav {
+  @apply p-4 md:py-4 md:px-6 flex flex-row items-center justify-between lg:justify-evenly backdrop-blur-md lg:backdrop-blur-lg rounded-full shadow-md;
+}
+
+.links {
+  @apply hidden flex-row gap-8 lg:flex;
+}

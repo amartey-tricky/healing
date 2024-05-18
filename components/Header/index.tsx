@@ -2,10 +2,11 @@
 
 import styles from "./style.module.css";
 
-import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline"
+import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import { Transition } from "@headlessui/react";
 import Link from "next/link";
-import ThemeToggle from "../ThemeToggle"
+import ThemeToggle from "../ThemeToggle";
 
 const Links = [
   {
@@ -28,14 +29,14 @@ const Links = [
     name: "Contact",
     link: "/contact",
   },
-]
+];
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
 
   return (
     <header className={styles.header}>
@@ -44,21 +45,42 @@ export default function Home() {
         <div className={styles.links}>
           {Links.map((link) => {
             return (
-              <Link key={link.id} href={link.link}>{link.name}</Link>
-            )
+              <Link key={link.id} href={link.link}>
+                {link.name}
+              </Link>
+            );
           })}
         </div>
         <div className={styles.menu}>
           <ThemeToggle />
-          <button type="button" onClick={toggleMenu} className={styles.menuButton}>
-            {isOpen ? (
-              <XMarkIcon />
-            ) : (
-              <Bars3Icon />
-            )}
-          </button>
         </div>
+        <button
+          type="button"
+          onClick={toggleMenu}
+          className={styles.menuButton}
+        >
+          {isOpen ? <XMarkIcon /> : <Bars3Icon />}
+        </button>
       </nav>
+      <Transition
+        show={isOpen}
+        enter="transition ease-in-out duration-300"
+        enterFrom="-translate-x-full"
+        enterTo="translate-x-0"
+        leave="transition ease-in-out duration-300"
+        leaveFrom="translate-x-0"
+        leaveTo="-translate-x-full"
+      >
+        <nav className="flex flex-col gap-9 text-xl items-center justify-evenly md:text-2xl md:font-semibold md:gap-12">
+          {Links.map((link) => {
+            return (
+              <Link key={link.id} href={link.link} onClick={toggleMenu}>
+                {link.name}
+              </Link>
+            );
+          })}
+        </nav>
+      </Transition>
     </header>
-  )
+  );
 }

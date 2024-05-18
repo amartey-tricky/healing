@@ -1,5 +1,5 @@
 .themeToggle {
-  @apply transition-all rounded flex items-center justify-center h-8 w-8;
+  @apply ease-linear duration-300 rounded flex items-center justify-center h-8 w-8;
 }
 
 .sun {

@@ -3,7 +3,7 @@ import { ThemeProvider } from "@/providers/themeProvider";
 import { inter } from "@/components/fonts";
 import Header from "@/components/Header";
 import "./globals.css";
-import { Footer } from "@/components/footer";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Healing",

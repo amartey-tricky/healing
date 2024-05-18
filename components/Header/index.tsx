@@ -2,6 +2,7 @@
 
 import styles from "./style.module.css";
 
+import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline"
 import { useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "../ThemeToggle"
@@ -30,10 +31,10 @@ const Links = [
 ]
 
 export default function Home() {
-  const [isActive, setIsActive] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsActive(!isActive)
+    setIsOpen(!isOpen)
   }
 
   return (
@@ -47,7 +48,16 @@ export default function Home() {
             )
           })}
         </div>
-        <ThemeToggle />
+        <div className={styles.menu}>
+          <ThemeToggle />
+          <button type="button" onClick={toggleMenu} className={styles.menuButton}>
+            {isOpen ? (
+              <XMarkIcon />
+            ) : (
+              <Bars3Icon />
+            )}
+          </button>
+        </div>
       </nav>
     </header>
   )

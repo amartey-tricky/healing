@@ -71,7 +71,7 @@ export default function Home() {
         leaveFrom="translate-x-0"
         leaveTo="-translate-x-full"
       >
-        <nav className="flex flex-col gap-9 text-xl items-center justify-evenly md:text-2xl md:font-semibold md:gap-12">
+        <nav className="flex flex-col top-0 left-0 fixed h-full w-[60%] backdrop-blur-md gap-9 text-xl items-center justify-evenly md:text-2xl md:font-semibold md:gap-12">
           {Links.map((link) => {
             return (
               <Link key={link.id} href={link.link} onClick={toggleMenu}>
@@ -79,6 +79,7 @@ export default function Home() {
               </Link>
             );
           })}
+          <ThemeToggle />
         </nav>
       </Transition>
     </header>

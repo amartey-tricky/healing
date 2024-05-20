@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./style.module.css";
+import styles from "./index.module.css";
 
 import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline";
 import { useState } from "react";

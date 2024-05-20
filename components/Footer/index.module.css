@@ -1,0 +1,15 @@
+.footer {
+ @apply w-full px-4 md:px-8;
+}
+
+.footerContainer {
+  @apply w-full h-full p-4 md:py-6 md:px-14 capitalize font-medium border rounded-tl-md rounded-tr-md;
+}
+
+.footerHeader {
+  @apply text-3xl;
+}
+
+.footerParagraph {
+  @apply text-sm text-slate-500 dark:text-slate-400;
+}

@@ -6,7 +6,7 @@ import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { Transition } from "@headlessui/react";
 import Link from "next/link";
-import ThemeToggle from "../ThemeToggle";
+import ThemeSwitcher from "../ThemeSwitcher";
 
 const Links = [
   {
@@ -41,7 +41,7 @@ export default function Home() {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <div>Healing</div>
+        <Link href="/" className={styles.logo}>dr. togobo</Link>
         <div className={styles.links}>
           {Links.map((link) => {
             return (
@@ -52,7 +52,7 @@ export default function Home() {
           })}
         </div>
         <div className={styles.menu}>
-          <ThemeToggle />
+          <ThemeSwitcher />
         </div>
         <button
           type="button"
@@ -79,7 +79,7 @@ export default function Home() {
               </Link>
             );
           })}
-          <ThemeToggle />
+          <ThemeSwitcher />
         </nav>
       </Transition>
     </header>

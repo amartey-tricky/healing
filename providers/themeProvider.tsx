@@ -1,14 +1,9 @@
-import { ThemeProvider as NextThemeProvider } from "next-themes";
-import type { PropsWithChildren } from "react";
+"use client";
 
-export const ThemeProvider: React.FC<PropsWithChildren> = ({ children }) => {
-  return (
-    <NextThemeProvider
-      attribute="data-theme"
-      defaultTheme="system"
-      enableSystem={true}
-    >
-      {children}
-    </NextThemeProvider>
-  );
-};
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+import type { ThemeProviderProps } from "next-themes/dist/types";
+import * as React from "react";
+
+export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
+  return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
+}

@@ -1,9 +1,8 @@
-import Image from "next/image";
-import Hero from "@/components/Hero"
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen">
+    <main>
       <Hero />
     </main>
   );

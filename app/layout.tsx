@@ -4,10 +4,14 @@ import { inter } from "@/components/fonts";
 import Header from "@/components/Header";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import { ThemeProvider } from "@/providers/themeProvider";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Healing",
-  description: "The book of healing",
+  title: "Dr. Ambrose Togobo",
+  description: "Website for Dr. Ambrose Togobo",
 };
 
 export default function RootLayout({
@@ -17,8 +21,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
-        <ThemeProvider>
+      <body className={inter.className}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
           {children}
           <Footer />

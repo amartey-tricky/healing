@@ -21,6 +21,10 @@
   border;
 }
 
+.logo {
+  @apply text-nowrap capitalize font-mono font-bold text-xl md:text-3xl;
+}
+
 .links {
   @apply hidden 
   flex-row 

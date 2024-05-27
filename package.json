@@ -32,12 +32,5 @@
     "postcss": "latest",
     "tailwindcss": "latest",
     "typescript": "latest"
-    "@biomejs/biome": "latest",
-    "@types/node": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "postcss": "latest",
-    "tailwindcss": "latest",
-    "typescript": "latest"
   }
 }

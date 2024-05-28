@@ -1,0 +1,6 @@
+.main {
+  @apply 
+  w-full
+  px-4 
+  md:px-8;
+}

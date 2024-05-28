@@ -24,7 +24,7 @@ export default function Home() {
             alt="image of Dr Togobo"
             width={350}
             height={400}
-            className={styles.img}
+            // className={styles.img}
             loading="lazy"
             // blurDataURL="data:..."
             // placeholder="blur"

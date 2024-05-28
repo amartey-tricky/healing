@@ -1,7 +1,11 @@
 .hero {
-  @apply min-h-screen bg-cover;
+  @apply min-h-screen;
 }
 
 .heroContainer {
   @apply container px-4 md:px-6 py-24 w-full h-screen flex justify-evenly items-center;
+}
+
+.heroGrid {
+  @apply grid grid-cols-6;
 }

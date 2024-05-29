@@ -11,7 +11,7 @@ export default function Footer() {
             Dr Ambrose Togobo
           </h1>
           <p className={styles.p}>
-            © Copyright 2024 <Link href="/" className={styles.link}>Dr. Ambrose Togobo</Link>. All Rights Reserved.
+          &copy; Copyright {new Date().getFullYear()} <Link href="/" className={styles.link}>Dr. Ambrose Togobo</Link>. All Rights Reserved.
           </p>
         </div>
       </div>

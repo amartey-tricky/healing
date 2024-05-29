@@ -1,0 +1,39 @@
+.section {
+  @apply my-12;
+}
+
+.article {
+  @apply font-sans flex flex-col md:flex-row mb-8 md:px-24 lg:px-48;
+}
+
+.img {
+  @apply flex-none w-56 relative;
+}
+
+.image {
+  @apply absolute inset-0 w-full h-full object-cover rounded-lg;
+}
+
+.details {
+  @apply flex-auto p-6 rounded-lg border md:border-t md:border-l-0 md:border-r md:border-b;
+}
+
+.head {
+  @apply flex flex-wrap;
+}
+
+.heading {
+  @apply flex-auto font-medium text-slate-400;
+}
+
+.name {
+  @apply w-full flex-none mt-2 order-1 text-3xl font-bold text-violet-600;
+}
+
+.stock {
+  @apply text-sm font-medium text-slate-400;
+}
+
+.excerpt {
+  @apply text-sm text-slate-500;
+}
